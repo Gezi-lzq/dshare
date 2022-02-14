@@ -4,8 +4,9 @@ import router from "./router";
 import store from "./store";
 import Vue2Editor from "vue2-editor";
 
-import * as serviceWorker from './serviceWorker';
-import Web3 from 'web3';
+// import * as serviceWorker from './serviceWorker';
+// import Web3 from 'web3';
+import vuetify from './plugins/vuetify'
 
 Vue.use(Vue2Editor);
 
@@ -14,5 +15,6 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
-  render: (h) => h(App),
+  vuetify,
+  render: (h) => h(App)
 }).$mount("#app");
