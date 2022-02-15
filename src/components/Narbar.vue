@@ -16,7 +16,7 @@
         <v-btn
           v-for="link in links"
           :key="link.name"
-          :href="link.url"
+          :href="link.path"
           text
         >
           <link>{{ link.name }}
@@ -40,12 +40,13 @@
 
 <script>
 export default {
+name:"Narbar",
 data: () => ({
       links: [
-        {name:'主页',url:'/'},
-        {name:'分类',url:'/category'},
-        {name:'动态',url:'/subscript'},
-        {name:'发布',url:'/post'},
+        {name:'主页',path:'/'},
+        {name:'分类',path:'/category'},
+        {name:'动态',path:'/subscript'},
+        {name:'发布',path:'/post'},
       ],
     }),
 }

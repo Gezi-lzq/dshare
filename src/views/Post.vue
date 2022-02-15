@@ -1,16 +1,17 @@
 <template>
   <v-app id="inspire">
       <Narbar/>
-          <div class="editor">
-            <vue-editor />
-          </div>
+    <v-main class="grey lighten-3">
+      <Editor/>
+    </v-main>
   </v-app>
 </template>
 
 <script>
+import Editor from '../components/Editor.vue'
 import Narbar from '../components/Narbar.vue'
 export default {
-  components: { Narbar },
+  components: { Narbar, Editor },
 
 }
 </script>
