@@ -2,13 +2,13 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import Vue2Editor from "vue2-editor";
-
 // import * as serviceWorker from './serviceWorker';
 // import Web3 from 'web3';
 import vuetify from './plugins/vuetify'
 
-Vue.use(Vue2Editor);
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+Vue.use(mavonEditor)
 
 Vue.config.productionTip = false;
 

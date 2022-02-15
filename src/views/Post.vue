@@ -12,7 +12,7 @@ import Editor from '../components/Editor.vue'
 import Narbar from '../components/Narbar.vue'
 export default {
   components: { Narbar, Editor },
-
+  
 }
 </script>
 
