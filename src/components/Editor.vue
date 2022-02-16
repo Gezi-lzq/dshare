@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" md="8">
           <v-text-field
-            label="Outlined"
+            label="标题"
             outlined
             v-model="title"
             class="mt-4"

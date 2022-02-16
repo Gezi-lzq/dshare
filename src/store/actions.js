@@ -7,23 +7,23 @@ const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' 
 // 准备actions--用于响应组件中的动作
 const actions = {
 
-  async InitBlockchain(context,DVideo) {
+  async InitBlockchain(context,DShare) {
       const web3 = window.web3;
       //Load account
       const accounts = await web3.eth.getAccounts();
       //Get network ID
       const networkId = await web3.eth.net.getId();
       //Get network data
-      const networkData = DVideo.networks[networkId];
+      const networkData = DShare.networks[networkId];
       if (networkData) {
 
-        const dvideo = new web3.eth.Contract(DVideo.abi, networkData.address);
-        context.commit('InitNetword',{ account:accounts[0] , dvideo } )
-        context.dispatch('LoadVideoDate')
+        const dshare = new web3.eth.Contract(DShare.abi, networkData.address);
+        context.commit('InitNetword',{ account:accounts[0] , dshare } )
+        context.dispatch('LoadShareDate')
       } else {
-        context.commit('InitNetword',{ account:accounts[0] , dvideo:null } )
+        context.commit('InitNetword',{ account:accounts[0] , dshare:null } )
         //If network data doesn't exisits, log error
-        window.alert("DVideo contrast not deploy to detected network");
+        window.alert("DShare contrast not deploy to detected network");
       }
     },
 
