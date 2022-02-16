@@ -4,6 +4,8 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Category from "../views/Category.vue"
 import Post from "../views/Post.vue"
+import Login from "../views/Login.vue"
+import Register  from "../views/Register.vue"
 
 Vue.use(VueRouter);
 
@@ -22,6 +24,16 @@ const routes = [
     path: '/post',
     name: "post",
     component: Post
+  },
+  {
+    path: '/login',
+    name: "login",
+    component: Login
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register
   }
 ];
 
